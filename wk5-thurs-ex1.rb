@@ -6,9 +6,6 @@ seating_chart = [
 ]
 
 def seat_checker(arr)
-    puts "What is your name?"
-    print "> "
-    name = gets.chomp
     i = 0
     imax = arr.length
     answer = nil
@@ -26,8 +23,10 @@ def seat_checker(arr)
                     answer = gets.chomp
                 end
                 if answer == 'y'
+                    puts "What is your name?"
+                    print "> "
+                    name = gets.chomp
                     arr[i][j] = name
-                    return arr
                 end
                 answer = nil
             end
@@ -39,4 +38,3 @@ def seat_checker(arr)
 end
 
 puts seat_checker(seating_chart)
-
